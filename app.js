@@ -1,6 +1,10 @@
 const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
+const session = require('express-session');
+const redis = require('redis');
+const redisStore = require('connect-redis')(session);
+const redisClient = redis.createClient();
 
 const PORT = 3000;
 
@@ -18,6 +22,28 @@ app.use(express.static(path.join(process.env.PWD, 'public')));
 
 app.use(express.json()); // <- 'application/json'
 app.use(express.urlencoded({ extended: true })); // <- 'application/x-www-form-urlencoded'
+
+app.use(
+  session({
+    key: 'sid',
+    secret: 'mysecret',
+    store: new redisStore({
+      host: 'localhost',
+      port: 3000,
+      client: redisClient,
+    }),
+    saveUninitialized: false,
+    resave: false,
+    httpOnly: true,
+    cookie: { expires: 24 * 60 * 60e3 },
+  })
+);
+
+app.use((req, res, next) => {
+  res.locals.userId = req.session?.userId;
+  res.locals.userEmail = req.session?.userEmail;
+  next();
+});
 
 app.use('/', indexRouter);
 app.use('/user', userRouter);

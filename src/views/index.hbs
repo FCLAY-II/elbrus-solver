@@ -18,12 +18,11 @@
       aria-describedby="emailHelp"
       name="lastname"
     />
-    <div id="emailHelp" class="form-text">We'll never share your email with
-      anyone else.</div>
+    
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email</label>
       <input class="form-control" id="exampleInputEmail1" name="email" />
-      <div id="emailHelp" class="form-text">We'll never share your login with
+      <div id="emailHelp" class="form-text">We'll never share your email with
         anyone else.</div>
     </div>
     <div class="mb-3">
@@ -32,7 +31,7 @@
       type="tel"
       class="form-control"
       id="exampleInputPassword1"
-      name="password"
+      name="phone"
     />
   </div>
   <div class="mb-3">
@@ -43,6 +42,9 @@
       id="exampleInputPassword1"
       name="password"
     />
+    <div id="emailHelp" class="form-text">We'll never share your password with
+      anyone else.</div>
+    </div>
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Повторите пароль</label>
@@ -58,21 +60,20 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 
   </div>
-</form>
-</div>
-</div>
 
+
+</form method="POST" action="/user/signIn" class="mb-3">
+</div>
+</div>
 <div class="centerlog">
 <div style="text-align: center"><p class="account">Еще не зарегистрированы? <a href="/" style="text-decoration: none;">Создайте аккаунт</a></p></div>
 <form method="POST" action="/user/signUp" class="mb-3">
   <div class="mb-3">
-    <div id="emailHelp" class="form-text">We'll never share your email with
-      anyone else.</div>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email</label>
       <input class="form-control" id="exampleInputEmail1" name="email" />
-      <div id="emailHelp" class="form-text">We'll never share your login with
-        anyone else.</div>
+      <div id="emailHelp" class="form-text">We'll never share your email with
+      anyone else.</div>
     </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Пароль</label>
@@ -82,7 +83,12 @@
       id="exampleInputPassword1"
       name="password"
     />
+    <div id="emailHelp" class="form-text">We'll never share your password with
+      anyone else.</div>
+    </div>
   </div>
+  <div class="butt">
   <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
 </form>
 </div>

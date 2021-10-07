@@ -12,10 +12,10 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsTo(models.Category, {
         foreignKey: 'category_id',
       });
-      this.ManyToMany(User, { through: 'Usertask', foreignKey: 'task_id' });
+      this.belongsToMany(models.User, { through: 'Usertasks', foreignKey: 'task_id' });
     }
   }
-  task.init(
+  Task.init(
     {
       category_id: DataTypes.INTEGER,
       task: DataTypes.STRING,
