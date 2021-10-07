@@ -18,9 +18,9 @@ module.exports = {
         {
           first_name: 'John',
           last_name: 'Wick',
-          phone_number: '345345',
+          phone_number: '56754',
           password: 'encrypted',
-          email: 'dsfgdsh@gmail.com',
+          email: 'dsfgd754sh@gmail.com',
           score: 34,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -28,9 +28,9 @@ module.exports = {
         {
           first_name: 'John',
           last_name: 'Wick',
-          phone_number: '345345',
+          phone_number: '367855345',
           password: 'encrypted',
-          email: 'dsfgdsh@gmail.com',
+          email: 'dsfdfgdfhnsh@gmail.com',
           score: 34,
           createdAt: new Date(),
           updatedAt: new Date(),

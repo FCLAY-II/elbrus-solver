@@ -2,18 +2,24 @@ const route = require('express').Router();
 const { User } = require('../db/models');
 
 route.post('/signUp', async (req, res) => {
-  const { firstname, lastname, email, phone, password: pass } = req.body;
+  const {
+    first_name,
+    last_name,
+    email,
+    phone_number,
+    password: pass,
+  } = req.body;
   const saltRounds = 10;
   const password = await bcrypt.hash(pass, saltRounds);
   const currUser = await User.create({
-    firstname,
-    lastname,
+    first_name,
+    last_name,
     email,
-    phone,
+    phone_number,
     password,
   });
   req.session.userId = currUser.id;
-  req.session.firstname = currUser.firstname;
+  req.session.first_name = currUser.first_name;
   res.redirect('/');
 });
 
@@ -25,7 +31,7 @@ route.post('/signIn', async (req, res) => {
     return res.redirect('/');
   }
   req.session.UserID = currUser.id;
-  req.session.firstname = currUser.firstname;
+  req.session.first_name = currUser.first_name;
   res.redirect('/');
 });
 

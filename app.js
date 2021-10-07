@@ -6,9 +6,12 @@ const redis = require('redis');
 const redisStore = require('connect-redis')(session);
 const redisClient = redis.createClient();
 
+const app = express()
+
 const PORT = 3000;
 
-const app = express();
+
+
 
 const indexRouter = require('./src/routes/indexRouter');
 const userRouter = require('./src/routes/userRouter');
