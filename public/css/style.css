@@ -121,9 +121,22 @@ svg {
   display: flex;
   justify-content: center;
 }
+
+.formicka {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #seven{
 margin-right: 1px;
 }
 #eight{
   margin-left: 1px;
 }
+
+#editor{
+  margin: top 3%;
+}
+
+

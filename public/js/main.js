@@ -4,7 +4,7 @@ const allBlock = document;
 const login = document.querySelector('.centerlog');
 
 
-registration.addEventListener('click', (event) => {
+registration?.addEventListener('click', (event) => {
   if (event.target.innerText === 'Войти') {
     login.style.display = 'block';
     navbar.style.display = 'none';
@@ -19,7 +19,7 @@ registration.addEventListener('click', (event) => {
   }
 });
 
-login.addEventListener('click', (event) => {
+login?.addEventListener('click', (event) => {
   if (event.target.innerText === 'Создайте аккаунт') {
     registration.style.display = 'block';
     navbar.style.display = 'none';
@@ -34,7 +34,7 @@ login.addEventListener('click', (event) => {
   }
 });
 
-navbar.addEventListener('click', (event) => {
+navbar?.addEventListener('click', (event) => {
   if (event.target.innerText === 'Регистрация') {
     registration.style.display = 'block';
     navbar.style.display = 'none';
@@ -58,3 +58,4 @@ navbar.addEventListener('click', (event) => {
     });
   }
 });
+
