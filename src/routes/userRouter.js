@@ -1,7 +1,9 @@
 const route = require('express').Router();
 const { User } = require('../db/models');
+const bcrypt = require('bcrypt');
 
 route.post('/signUp', async (req, res) => {
+  console.log(req.body);
   const {
     first_name,
     last_name,
