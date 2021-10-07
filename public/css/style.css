@@ -76,29 +76,54 @@ body {
   flex-direction: row;
 }
 
-@import "compass/css3";
+@import 'compass/css3';
 
 @import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
 
 .info {
   color: white;
-  font:1em/1 sans-serif;
+  font: 1em/1 sans-serif;
   text-align: center;
 }
 
-.info a{
+.info a {
   color: white;
 }
 
-svg{
+svg {
   width: 600px;
   height: 120px;
   display: block;
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2em;
 }
 
+.kyu {
+  width: 250px;
+  height: 300px;
+  color: white;
+  background-color: #2c144273;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+.kyu:hover{
+    background: rgb(47, 21, 72, 0.88); /* Цвет фона */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+    padding: 10px;
+}
 
+.solve {
+  display: flex;
+  justify-content: center;
+}
+#seven{
+margin-right: 1px;
+}
+#eight{
+  margin-left: 1px;
+}
