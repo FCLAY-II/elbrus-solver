@@ -2,17 +2,14 @@ const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
 
-const app = express()
-
-app.listen(3000)
-// const PORT = 3000;
+const PORT = 3000;
 
 
 
 //const app = express();
 //hbs.registerPartials(path.join(process.env.PWD, 'src', 'views', 'partials'));
 
-//app.set('view engine', 'hbs');
+app.set('view engine', 'hbs');
 //app.set('views', path.join(process.env.PWD, 'src', 'views'));
 
 //app.use(express.static(path.join(process.env.PWD, 'public')));
