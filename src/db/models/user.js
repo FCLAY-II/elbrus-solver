@@ -11,15 +11,32 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.ManyToMany(Task, { through: 'Usertask', foreignKey: 'user_id' });
+      this.belongsToMany(Task, { through: 'Usertask', foreignKey: 'user_id' });
     }
   };
   User.init({
-    first_name: DataTypes.STRING,
-    last_name: DataTypes.STRING,
-    phone_number: DataTypes.INTEGER,
-    password: DataTypes.STRING,
-    email: DataTypes.STRING,
+    first_name: { 
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    last_name: { 
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    phone_number: { 
+      type: DataTypes.INTEGER,
+      unique: true,
+      allowNull: false,
+    },
+    password: { 
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    email: { 
+      type: DataTypes.STRING,
+      unique: true,
+      allowNull: false,
+    },
     score: DataTypes.INTEGER
   }, {
     sequelize,
