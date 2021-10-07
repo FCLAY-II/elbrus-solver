@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsTo(models.Category, {
         foreignKey: 'category_id',
       });
-      this.belongsToMany(User, { through: 'Usertask', foreignKey: 'task_id' });
+      this.belongsToMany(models.User, { through: 'Usertasks', foreignKey: 'task_id' });
     }
   }
   Task.init(

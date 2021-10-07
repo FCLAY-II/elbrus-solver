@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     kata: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'category',
+    modelName: 'Category',
   });
   return Category;
 };
