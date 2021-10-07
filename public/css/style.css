@@ -4,11 +4,11 @@
 
 body {
   margin: 0;
-  background-color: #E2E3E5;
+  background-color: #e2e3e5;
   min-height: 100vh;
   max-height: 100vh;
   overflow-y: hidden;
-  background: url(../images/backimg.jpg) no-repeat center center fixed; 
+  background: url(../images/backimg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -62,6 +62,16 @@ body {
   box-shadow: 12px -9px 680px 680px rgb(0 0 0 / 50%);
 }
 
-#nav {
-  background-color: blueviolet;
+.navbar {
+  background-color: #af96c79e !important;
+}
+
+.collapse {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rightDiv {
+  display: flex;
+  flex-direction: row;
 }

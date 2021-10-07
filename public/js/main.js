@@ -9,9 +9,9 @@ registration.addEventListener('click', (event) => {
     login.style.display = 'block';
     navbar.style.display = 'none';
     registration.style.display = 'none';
+    event.preventDefault();
     allBlock.addEventListener('click', (event) => {
-      event.stopPropagation();
-      if (event.target.parentElement === null) {
+      if (event.target.parentElement.tagName === 'HTML') {
         login.style.display = 'none';
         navbar.style.display = 'block';
       }
@@ -24,9 +24,9 @@ login.addEventListener('click', (event) => {
     registration.style.display = 'block';
     navbar.style.display = 'none';
     login.style.display = 'none';
+    event.preventDefault();
     allBlock.addEventListener('click', (event) => {
-      event.stopPropagation();
-      if (event.target.parentElement === null) {
+      if (event.target.parentElement.tagName === 'HTML') {
         registration.style.display = 'none';
         navbar.style.display = 'block';
       }
@@ -38,9 +38,9 @@ navbar.addEventListener('click', (event) => {
   if (event.target.innerText === 'Регистрация') {
     registration.style.display = 'block';
     navbar.style.display = 'none';
+    event.preventDefault();
     allBlock.addEventListener('click', (event) => {
-      event.stopPropagation();
-      if (event.target.parentElement === null) {
+      if (event.target.parentElement.tagName === 'HTML') {
         registration.style.display = 'none';
         navbar.style.display = 'block';
       }
@@ -49,9 +49,9 @@ navbar.addEventListener('click', (event) => {
   if (event.target.innerText === 'Авторизация') {
     login.style.display = 'block';
     navbar.style.display = 'none';
+    event.preventDefault()
     allBlock.addEventListener('click', (event) => {
-      event.stopPropagation();
-      if (event.target.parentElement === null) {
+      if (event.target.parentElement.tagName === 'HTML') {
         login.style.display = 'none';
         navbar.style.display = 'block';
       }
