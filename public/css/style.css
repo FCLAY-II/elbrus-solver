@@ -1,6 +1,21 @@
 .account {
   margin-top: 25px;
 }
+
+body {
+  margin: 0;
+  background-color: #e2e3e5;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: hidden;
+  background: url(../images/backimg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .center {
   margin: auto;
   display: flex;
@@ -45,4 +60,70 @@
   align-content: space-around;
   border-radius: 16px;
   box-shadow: 12px -9px 680px 680px rgb(0 0 0 / 50%);
+}
+
+.navbar {
+  background-color: #af96c79e !important;
+}
+
+.collapse {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rightDiv {
+  display: flex;
+  flex-direction: row;
+}
+
+@import 'compass/css3';
+
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+
+.info {
+  color: white;
+  font: 1em/1 sans-serif;
+  text-align: center;
+}
+
+.info a {
+  color: white;
+}
+
+svg {
+  width: 600px;
+  height: 120px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+}
+
+.kyu {
+  width: 250px;
+  height: 300px;
+  color: white;
+  background-color: #2c144273;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+.kyu:hover{
+    background: rgb(47, 21, 72, 0.88); /* Цвет фона */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+    padding: 10px;
+}
+
+.solve {
+  display: flex;
+  justify-content: center;
+}
+#seven{
+margin-right: 1px;
+}
+#eight{
+  margin-left: 1px;
 }
