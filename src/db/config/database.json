@@ -1,8 +1,8 @@
 {
 	"development": {
-		"username": "elbrususer",
-		"password": "351269elbrus",
-		"database": "elbrussolveeverything",
+		"username": "bootakov",
+		"password": 744773,
+		"database": "evian",
 		"host": "127.0.0.1",
 		"dialect": "postgres",
 		"seederStorage": "sequelize",
