@@ -1,0 +1,48 @@
+.account {
+  margin-top: 25px;
+}
+.center {
+  margin: auto;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  padding: 3%;
+  background-color: white;
+  z-index: 10;
+  display: none;
+  width: 50%;
+  flex-direction: column;
+  align-content: space-around;
+  border-radius: 16px;
+  box-shadow: 12px -9px 680px 680px rgb(0 0 0 / 50%);
+}
+.butt {
+  display: flex;
+  justify-content: center;
+}
+
+.m-5 {
+  z-index: 5px !important;
+}
+
+.centerlog {
+  margin: auto;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  padding: 3%;
+  background-color: white;
+  z-index: 10;
+  display: none;
+  width: 50%;
+  flex-direction: column;
+  align-content: space-around;
+  border-radius: 16px;
+  box-shadow: 12px -9px 680px 680px rgb(0 0 0 / 50%);
+}
