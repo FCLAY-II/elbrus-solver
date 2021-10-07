@@ -75,3 +75,30 @@ body {
   display: flex;
   flex-direction: row;
 }
+
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+
+.info {
+  color: white;
+  font:1em/1 sans-serif;
+  text-align: center;
+}
+
+.info a{
+  color: white;
+}
+
+svg{
+  width: 600px;
+  height: 120px;
+  display: block;
+  position: relative;
+  overflow: hidden; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+}
+
+
