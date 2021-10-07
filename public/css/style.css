@@ -106,24 +106,53 @@ svg {
   height: 300px;
   color: white;
   background-color: #2c144273;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
 }
-.kyu:hover{
-    background: rgb(47, 21, 72, 0.88); /* Цвет фона */
-    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
-    padding: 10px;
+.kyu:hover {
+  background: rgb(47, 21, 72, 0.88); /* Цвет фона */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Параметры тени */
+  padding: 10px;
 }
 
 .solve {
   display: flex;
   justify-content: center;
 }
-#seven{
-margin-right: 1px;
+#seven {
+  margin-right: 1px;
 }
-#eight{
+#eight {
   margin-left: 1px;
+}
+
+.para {
+  display: flex;
+  min-width: 300px;
+  min-height: 50px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.para__h {
+  display: block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  opacity: 50%;
+  border: 0 solid white;
+  border-radius: 20px;
+  outline: none;
+  padding: 20px;
+}
+
+.para__h:hover {
+  display: block;
+  background-color: rgb(149, 96, 184);
+  opacity: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  /* padding-bottom: 10px; */
+  /* border: none; */
 }
