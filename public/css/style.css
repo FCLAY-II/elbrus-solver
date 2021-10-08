@@ -167,4 +167,8 @@ margin-right: 1px;
   margin: top 3%;
 }
 
-
+.score {
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
+}
