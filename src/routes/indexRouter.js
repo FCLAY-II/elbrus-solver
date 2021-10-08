@@ -4,6 +4,7 @@ const { Task } = require('../db/models');
 const { User } = require('../db/models');
 
 route.get('/', (req, res) => {
+
   res.render('index')
 })
 
@@ -50,6 +51,7 @@ route.post("/tasks/:category/:taskid", async (req, res) => {
   catch (err) {
     res.sendStatus(500)
   }
+
 });
 
 

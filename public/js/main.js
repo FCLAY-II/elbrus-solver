@@ -2,7 +2,7 @@ const navbar = document.querySelector('.container-fluid');
 const registration = document.querySelector('.center');
 const allBlock = document;
 const login = document.querySelector('.centerlog');
-
+const seven = document.querySelector('#seven');
 
 registration?.addEventListener('click', (event) => {
   if (event.target.innerText === 'Войти') {
@@ -49,7 +49,7 @@ navbar?.addEventListener('click', (event) => {
   if (event.target.innerText === 'Авторизация') {
     login.style.display = 'block';
     navbar.style.display = 'none';
-    event.preventDefault()
+    event.preventDefault();
     allBlock.addEventListener('click', (event) => {
       if (event.target.parentElement.tagName === 'HTML') {
         login.style.display = 'none';
@@ -59,3 +59,18 @@ navbar?.addEventListener('click', (event) => {
   }
 });
 
+seven.addEventListener('click', async (event) => {
+  if (event.target.closest('div')) {
+    const articleId = event.target.closest('article').id;
+    const response = await fetch(`/tasks/${articleId}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ id: articleId }),
+    });
+    if(response.ok) {
+      
+    }
+  }
+});

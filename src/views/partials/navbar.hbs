@@ -7,18 +7,18 @@
 
     <div class='collapse navbar-collapse' id='navbarSupportedContent'>
 
+        {{#if first_name}}
       <div class='leftDiv'>
-
+          <a class='form-control me-2 dropdown-item' href='/'>Домой</a>
       </div>
 
       <div class='centerDiv'>
-        {{!-- {{#if first_name}}
-          <a class='form-control me-2 dropdown-item' href='/'>Решать задачи</a>
-        {{/if}} --}}
+
+          <a class='form-control me-2 dropdown-item' href='/user/solve'>Решать задачи</a>
+
       </div>
 
       <div class='rightDiv'>
-        {{#if first_name}}
         <a class='form-control me-2 dropdown-item'>{{first_name}}</a>
           <a
             style='text-decoration: none;'
