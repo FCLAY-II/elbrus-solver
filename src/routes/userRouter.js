@@ -1,7 +1,9 @@
 const route = require('express').Router();
 const { User } = require('../db/models');
+const bcrypt = require('bcrypt');
 
 route.post('/signUp', async (req, res) => {
+  console.log(req.body);
   const {
     first_name,
     last_name,
@@ -20,7 +22,7 @@ route.post('/signUp', async (req, res) => {
   });
   req.session.userId = currUser.id;
   req.session.first_name = currUser.first_name;
-  res.redirect('/');
+  res.redirect('/user/solve');
 });
 
 route.post('/signIn', async (req, res) => {
@@ -32,6 +34,16 @@ route.post('/signIn', async (req, res) => {
   }
   req.session.UserID = currUser.id;
   req.session.first_name = currUser.first_name;
+  res.redirect('/user/solve');
+});
+
+route.get('/solve', (req, res) => {
+  res.render('solve');
+});
+
+route.get('/logout', (req, res) => {
+  req.session.destroy();
+  res.clearCookie('sid');
   res.redirect('/');
 });
 
