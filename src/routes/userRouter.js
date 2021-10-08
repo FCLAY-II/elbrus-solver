@@ -19,6 +19,7 @@ route.post('/signUp', async (req, res) => {
     email,
     phone_number,
     password,
+    score: 0,
   });
   req.session.userId = currUser.id;
   req.session.first_name = currUser.first_name;

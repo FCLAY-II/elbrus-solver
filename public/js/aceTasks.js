@@ -9,12 +9,19 @@ editor.session.getTextRange(editor.getSelectionRange());
 $formichka.addEventListener("click", async (event) => {
   event.preventDefault();
   const getValue = editor.getValue();
-  console.log(getValue);
-  const response = await fetch("/tasks/1/4", {
+  let taskId = event.target.closest('div').id
+  let categoryId = event.target.closest('span').id
+  const response = await fetch(`/tasks/${categoryId}/${taskId}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ getValue }),
   });
+console.log(response.status);
+  if (response.ok) {
+    window.location = `/tasks/${categoryId}/${Number(taskId) + 1}`
+  } else if (response.status === 500) {
+    window.location = `/tasks`
+  }
 });
