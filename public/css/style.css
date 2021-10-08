@@ -121,8 +121,15 @@ svg {
   display: flex;
   justify-content: center;
 }
-#seven {
-  margin-right: 1px;
+
+.formicka {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#seven{
+margin-right: 1px;
 }
 #eight {
   margin-left: 1px;
@@ -156,3 +163,8 @@ svg {
   /* padding-bottom: 10px; */
   /* border: none; */
 }
+#editor{
+  margin: top 3%;
+}
+
+

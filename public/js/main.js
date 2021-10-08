@@ -2,9 +2,9 @@ const navbar = document.querySelector('.container-fluid');
 const registration = document.querySelector('.center');
 const allBlock = document;
 const login = document.querySelector('.centerlog');
+const seven = document.querySelector('#seven');
 
-
-registration.addEventListener('click', (event) => {
+registration?.addEventListener('click', (event) => {
   if (event.target.innerText === 'Войти') {
     login.style.display = 'block';
     navbar.style.display = 'none';
@@ -19,7 +19,7 @@ registration.addEventListener('click', (event) => {
   }
 });
 
-login.addEventListener('click', (event) => {
+login?.addEventListener('click', (event) => {
   if (event.target.innerText === 'Создайте аккаунт') {
     registration.style.display = 'block';
     navbar.style.display = 'none';
@@ -34,7 +34,7 @@ login.addEventListener('click', (event) => {
   }
 });
 
-navbar.addEventListener('click', (event) => {
+navbar?.addEventListener('click', (event) => {
   if (event.target.innerText === 'Регистрация') {
     registration.style.display = 'block';
     navbar.style.display = 'none';
@@ -49,12 +49,28 @@ navbar.addEventListener('click', (event) => {
   if (event.target.innerText === 'Авторизация') {
     login.style.display = 'block';
     navbar.style.display = 'none';
-    event.preventDefault()
+    event.preventDefault();
     allBlock.addEventListener('click', (event) => {
       if (event.target.parentElement.tagName === 'HTML') {
         login.style.display = 'none';
         navbar.style.display = 'block';
       }
     });
+  }
+});
+
+seven.addEventListener('click', async (event) => {
+  if (event.target.closest('div')) {
+    const articleId = event.target.closest('article').id;
+    const response = await fetch(`/tasks/${articleId}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ id: articleId }),
+    });
+    if(response.ok) {
+      
+    }
   }
 });
