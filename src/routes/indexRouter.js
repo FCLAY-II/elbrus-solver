@@ -1,20 +1,26 @@
 const route = require('express').Router();
+const { Task } = require('../db/models') 
 
-route.get('/', (req, res) => {
-  res.render('tasks');
+route.get('/tasks/:id/:id', async (req, res) => {
+  let taska = await Task.findOne({ where: { id: req.params.id }})
+  console.log(taska);
+  res.render('tasks', {taska});
 });
 
-route.post("/tasks/:id", (req, res) => {
-  // console.log(req.body);
+route.post("/tasks/:category/:task", async (req, res) => {
+
   const result = req.body.getValue;
-  console.log(result);
-  // var func = new Function("return " + result)();
-  // console.log(func);
-  // var fn = Function(`console.log((${result}))`);
-  var func = new Function("return " + result)();
-  console.log(func(50, 100));
-  // const fun = Function(result)
-  // console.log(fun(2,3));
+  console.log({arguments});
+
+  let full = await Task.findOne({ where: { id: req.params.task }})
+  let args = full.args
+  let normArgs = args.split(',').map((el) => +el)
+  console.log(normArgs);
+
+  let func = new Function("return " + result)();
+  console.log(func.apply(null, normArgs));
+
 });
+
 
 module.exports = route;

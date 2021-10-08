@@ -1,10 +1,15 @@
+  
 <div class="formicka">
+
+  <div class="task-title">
+    {{taska.task}}
+  </div>
 
       <div id="editor">function funcTest() {}
       </div>
 
       <div>
-        <button id='but' type="button" class="btn btn-primary btn-lg">Check</button>
+        <button id='but' type="button" class="btn btn-primary btn-lg" href="/tasks/{{taska.category_id}}/{{taska.id}}">Check</button>
       </div>
 
     </div>

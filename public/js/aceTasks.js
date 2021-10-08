@@ -10,7 +10,7 @@ $formichka.addEventListener("click", async (event) => {
   event.preventDefault();
   const getValue = editor.getValue();
   console.log(getValue);
-  const response = await fetch("/", {
+  const response = await fetch("/tasks/1/4", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

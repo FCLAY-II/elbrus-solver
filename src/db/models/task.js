@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       category_id: DataTypes.INTEGER,
       task: DataTypes.STRING,
+      args: DataTypes.STRING,
       answer: DataTypes.STRING,
     },
     {
