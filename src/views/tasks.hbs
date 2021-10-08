@@ -1,19 +1,19 @@
-<div class='formicka'>
+
+  <div>
+<span id= {{taska.category_id}} class="formicka">
+
+  <div class="task-title">
+    {{taska.task}}
+  </div>
+
 
   <div id='editor'>function funcTest() {}
   </div>
 
-  <div
-    style='display: flex; justify-content:center; margin-top: 2%;'
-  >
-    <a class='form-control me-2 dropdown-item' href='/user/solve' style="color: aliceblue; font-size: 30px;">Назад</a>
-    {{! <button
-      id='but'
-      type='button'
-      class='btn btn-primary btn-lg'
-      style='margin-top: 5% ;'
-    >Проверить</button> }}
-    <a class='form-control me-2 dropdown-item' href='/' style="color: aliceblue; font-size: 30px;">Проверить</a>
-  </div>
+      <div id={{taska.id}}>
+ <button id='but' type="button" class="btn btn-primary btn-lg" href="/tasks/{{taska.category_id}}/{{taska.id}}">Check</button>
+      </div>
+
+    </span>
 
 </div>

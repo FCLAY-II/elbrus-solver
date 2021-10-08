@@ -1,29 +1,59 @@
 const route = require('express').Router();
+const { Router } = require('express');
+const { Task } = require('../db/models'); 
+const { User } = require('../db/models');
 
 route.get('/', (req, res) => {
-  res.render('index');
+
+  res.render('index')
+})
+
+route.get('/tasks/:id/:taskid', async (req, res) => {
+  try {
+    let allTAsks = await Task.findAll()
+    if(req.params.taskid<=allTAsks.length){
+      let taska = await Task.findOne({ where: { id: req.params.taskid }})
+      res.render('tasks', {taska});
+    } else{
+    return res.redirect('/score')
+    }
+  } catch (error) {
+    return res.redirect('/score')
+  }
 });
 
-route.get('/tasks', (req, res) => {
-  res.render('tasks');
+route.get('/score', async (req, res) => {
+  let allScore = await User.findOne({ where: { id: req.session?.userId }})
+  res.render('score', {allScore})
+})
+
+route.post("/tasks/:category/:taskid", async (req, res) => {
+  try {
+    const result = req.body.getValue;
+    let full = await Task.findOne({ where: { id: req.params.taskid }})
+
+    let args = full.args
+    let normArgs = args.split(',').map((el) => +el)
+    let func = new Function("return " + result)();
+    let userAnswer = func.apply(null, normArgs);
+    console.log(func.apply(null, normArgs), full.answer);
+    // console.log(full.answer, userAnswer);
+    if (full.answer == userAnswer) {
+      console.log('проверка ответа', full.answer);
+        // User.update({ score: score+1},
+        // { where: {id: req.session?.userId} })
+        await User.increment('score', { where: {id: req.session?.userId}});
+    }
+    res.sendStatus(200)
+
+
+  } 
+  catch (err) {
+    res.sendStatus(500)
+  }
+
 });
 
-route.get('/tasks/:kyu', (req, res) => {
-  let { kyu } = req.params;
-  res.render('tasks');
-});
 
-route.post('/tasks/:id', (req, res) => {
-  // console.log(req.body);
-  const result = req.body.getValue;
-  console.log(result);
-  // var func = new Function("return " + result)();
-  // console.log(func);
-  // var fn = Function(`console.log((${result}))`);
-  var func = new Function('return ' + result)();
-  console.log(func(50, 100));
-  // const fun = Function(result)
-  // console.log(fun(2,3));
-});
 
 module.exports = route;
