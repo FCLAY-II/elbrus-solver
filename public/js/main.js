@@ -59,7 +59,7 @@ navbar?.addEventListener('click', (event) => {
   }
 });
 
-seven.addEventListener('click', async (event) => {
+seven?.addEventListener('click', async (event) => {
   if (event.target.closest('div')) {
     const articleId = event.target.closest('article').id;
     const response = await fetch(`/tasks/${articleId}`, {
