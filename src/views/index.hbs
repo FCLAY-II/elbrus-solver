@@ -1,20 +1,21 @@
-
+{{#if first_name}}
+{{else}}
 <div class="auth">
   <div class="auther form-control me-2 dropdown-item ttk">Авторизация</div>
   <div class="regist form-control me-2 dropdown-item ttk">Регистрация</div>
 </div>
-
+{{/if}}
 
 
 
 <div class="center">
-<div style="text-align: center"><p class="account">Уже есть аккаунт?    <a class="truelogin" href="/" style="text-decoration: none;">Войти</a></p></div>
+<div style="text-align: center"><p class="account">Уже есть аккаунт?    <a class="truelogin ups" href="/" style="text-decoration: none;">Войти</a></p></div>
 <form method="POST" action="/user/signUp" class="mb-3">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Имя</label>
     <input
       type="text"
-      class="form-control"
+      class="form-control inp"
       id="exampleInputEmail1"
       aria-describedby="emailHelp"
       name="first_name"
@@ -24,7 +25,7 @@
     <input
     required placeholder="Ваша фамилия"
       type="text"
-      class="form-control"
+      class="form-control inp"
       id="exampleInputEmail1"
       aria-describedby="emailHelp"
       name="last_name"
@@ -32,7 +33,7 @@
     
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email</label>
-      <input class="form-control" id="exampleInputEmail1" name="email" required placeholder=" Ваш email"/>
+      <input class="form-control inp" id="exampleInputEmail1" name="email" required placeholder=" Ваш email"/>
       <div id="emailHelp" class="form-text">We'll never share your email with
         anyone else.</div>
     </div>
@@ -41,7 +42,7 @@
     <input
     required placeholder="Ваш телефон"
       type="tel"
-      class="form-control"
+      class="form-control inp"
       id="exampleInputPassword1"
       name="phone_number"
     />
@@ -51,7 +52,7 @@
     <input
     required placeholder="Ваш пароль"
       type="password"
-      class="form-control"
+      class="form-control inp"
       id="exampleInputPassword1"
       name="password"
     />
@@ -70,7 +71,7 @@
   </div> --}}
   <div class="butt">
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn reg btn-primary">Submit</button>
 
   </div>
 
@@ -81,12 +82,12 @@
 </div>
 </div>
 <div class="centerlog">
-<div style="text-align: center"><p class="account">Еще не зарегистрированы? <a href="/" style="text-decoration: none;">Создайте аккаунт</a></p></div>
+<div style="text-align: center"><p class="account">Еще не зарегистрированы? <a href="/" class='ups' style="text-decoration: none;">Создайте аккаунт</a></p></div>
 <form method="POST" action="/user/signIn" class="mb-3">
   <div class="mb-3">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email</label>
-      <input class="form-control" id="exampleInputEmail1" name="email" required placeholder="Ваш email" />
+      <input class="form-control inp" id="exampleInputEmail1" name="email" required placeholder="Ваш email" />
       <div id="emailHelp" class="form-text">We'll never share your email with
       anyone else.</div>
     </div>
@@ -94,7 +95,7 @@
     <label for="exampleInputPassword1" class="form-label">Пароль</label>
     <input
       type="password"
-      class="form-control"
+      class="form-control inp"
       id="exampleInputPassword1"
       name="password"
       required placeholder="Ваш пароль"
@@ -104,7 +105,7 @@
     </div>
   </div>
   <div class="butt">
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn reg btn-primary">Submit</button>
   </div>
 </form>
 </div>

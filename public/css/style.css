@@ -40,8 +40,16 @@ body {
 }
 
 .m-5 {
+  height: 70%;
   display: flex;
-  justify-content: center;;
+  background: radial-gradient(
+    circle,
+    rgb(0 0 0 / 89%) 16%,
+    /* rgb(148 187 233 / 0.1%) 56% */
+    /* rgb(0 0 0 / 89%) 10%, */
+    rgb(148 187 233 / 0.1%) 30%
+  );
+  justify-content: center;
   z-index: 5px !important;
   margin-bottom: auto;
 }
@@ -66,7 +74,13 @@ body {
 }
 
 .navbar {
-  background-color: #af96c79e !important;
+  background-color: #000018a3 !important;
+  font-family: fantasy;
+  color: white!important;
+}
+
+.dropdown-item:active {
+    background-color: #24044b;
 }
 
 .collapse {
@@ -79,7 +93,7 @@ body {
   flex-direction: row;
 }
 
-@import 'compass/css3';
+@import "compass/css3";
 
 @import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
 
@@ -122,18 +136,22 @@ svg {
 
 .solve {
   display: flex;
-  justify-content: center;
+  margin-top: 4%;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
 .formicka {
   width: 600px;
   display: flex;
+  flex-direction: row;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-#seven{
-margin-right: 1px;
+#seven {
+  margin-right: 1px;
 }
 #eight {
   margin-left: 1px;
@@ -141,15 +159,18 @@ margin-right: 1px;
 
 .para {
   display: flex;
+  width: 100%;
+  align-items: stretch;
   flex-direction: column;
   min-width: 300px;
   min-height: 50px;
-  padding: 20px;
   margin-bottom: 30px;
 }
 
 .para__h {
   display: block;
+  display: flex;
+  justify-content: center;
   background-color: white;
   opacity: 85%;
   border: 0 solid white;
@@ -158,7 +179,7 @@ margin-right: 1px;
   padding: 20px;
 }
 
-#editor{
+#editor {
   margin: top 3%;
 }
 
@@ -180,81 +201,118 @@ margin-right: 1px;
   margin-bottom: 10px;
 }
 
-#but{
+#but {
   color: black;
   opacity: 85%;
-  width:50%;
+  width: 316%;
   background-color: white;
   border-color: black;
 }
-#butL{
+#butL {
   color: black;
   opacity: 85%;
-  width:50%;
+  width: 316%;
   background-color: white;
   border-color: black;
 }
 
-.tassk{
+.tassk {
+  width: 50%;
   display: flex;
   justify-content: center;
 }
 
-.buton{
-width:100%;
-display: flex;
-margin-top: 10px;
+.buton {
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
 }
 
-.score{
+.score {
   font-size: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.lvl{
+.lvl {
   width: 350px;
 }
-
-.cont{
+.ost{
+  margin-left: 3%;
+}
+.cont {
   margin-top: 17%;
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: center;
-
 }
-
-.auth{
-  /* margin: auto; */
-  background: radial-gradient(circle, rgb(0 0 0 / 89%) 4%, rgb(148 187 233 / 0.1%) 57%);
+body {
+  height: 100vh;
+  width: 100vw;
+}
+.auth {
+  margin: auto;
+  background: radial-gradient(
+    circle,
+    rgb(0 0 0 / 89%) 4%,
+    rgb(148 187 233 / 0.1%) 57%
+  );
   /* margin-top: 15%; */
   display: flex;
+  justify-content: space-evenly;
   flex-direction: column;
   align-content: center;
-  justify-content: center;
   align-items: center;
   height: 300px;
   width: 40%;
 }
 
-.ttk{
+.ttk {
   font-size: 21px;
   height: 70px;
   display: flex;
   color: white;
-  margin: 0px!important;
+  margin: 0px !important;
   align-items: center;
   justify-content: center;
 }
 
-.ttk:hover{
+.ttk:hover {
   color: #7e21d5;
-  background:radial-gradient(circle, rgb(0 0 0 / 18%) 0%, rgb(44 46 47 / 9%) 13%) ;
+  background: radial-gradient(
+    circle,
+    rgb(0 0 0 / 18%) 0%,
+    rgb(44 46 47 / 9%) 13%
+  );
 }
 
-.downsolve{
+.downsolve {
   display: flex;
   justify-content: center;
+}
+.dropdown-item{
+  color: white;
+}
+
+.reg{
+    color: #fff;
+    background-color: #513a70;
+    border-color: #513a70;
+}
+.inp:focus {
+border-color: #513a70;
+box-shadow: 0 0 0 0.25rem rgb(167 95 229 / 26%);
+}
+.ups{
+  color: #513a70;
+  font-style: oblique;
+}
+.ups:hover{
+  color: #b871c9;
+}
+
+label{
+ color: #513a70;
 }

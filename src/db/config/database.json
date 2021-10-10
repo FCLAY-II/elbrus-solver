@@ -1,23 +1,27 @@
 {
   "development": {
-    "username": "nedosnow",
-    "password": "1234",
-    "database": "database_development",
+    "username": "postgres",
+    "password": "Zbc320098",
+    "database": "data",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres",
+    "port": "6432"
   },
   "test": {
-    "username": "nedosnow",
-    "password": "1234",
-    "database": "database_test",
+    "username": "postgres",
+    "password": "Zbc320098",
+    "database": "data",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres",
+    "port": "6432"
   },
   "production": {
-    "username": "nedosnow",
-    "password": "1234",
-    "database": "database_production",
+    "username": "postgres",
+    "password": "Zbc320098",
+    "database": "data",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres",
+    "port": "6432"
   }
 }
+

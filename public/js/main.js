@@ -1,5 +1,6 @@
 const navbar = document.querySelector(".auth");
 const registration = document.querySelector('.center');
+const min = document.querySelector(".m-5");
 const allBlock = document;
 const login = document.querySelector('.centerlog');
 const seven = document.querySelector('#seven');
@@ -35,15 +36,14 @@ login?.addEventListener('click', (event) => {
 });
 
 navbar?.addEventListener('click', (event) => {
-  console.log(event.target.innerText);
   if (event.target.innerText === 'Регистрация') {
     registration.style.display = 'block';
     navbar.style.display = 'none';
     event.preventDefault();
     allBlock?.addEventListener('click', (event) => {
-      if (event.target.parentElement.tagName === 'HTML') {
-        registration.style.display = 'none';
-        navbar.style.display = 'block';
+      if ((event.target === min||event.target.parentElement.tagName) === "HTML") {
+        registration.style.display = "none";
+        navbar.style.display = "block";
       }
     });
   }
@@ -52,9 +52,13 @@ navbar?.addEventListener('click', (event) => {
     navbar.style.display = 'none';
     event.preventDefault();
     allBlock?.addEventListener('click', (event) => {
-      if (event.target.parentElement.tagName === 'HTML') {
-        login.style.display = 'none';
-        navbar.style.display = 'block';
+      console.log(event.target);
+      if (
+        event.target === min ||
+        event.target.parentElement.tagName === "HTML"
+      ) {
+        login.style.display = "none";
+        navbar.style.display = "block";
       }
     });
   }

@@ -25,8 +25,8 @@ module.exports = {
           model: 'Tasks',
           key: 'id',
         },
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE',
+        // onUpdate: 'CASCADE',
+        // onDelete: 'CASCADE',
       },
       createdAt: {
         allowNull: false,
