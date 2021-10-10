@@ -137,6 +137,7 @@ margin-right: 1px;
 
 .para {
   display: flex;
+  flex-direction: column;
   min-width: 300px;
   min-height: 50px;
   padding: 20px;
@@ -171,4 +172,37 @@ margin-right: 1px;
   display: flex;
   justify-content: center;
   color: aliceblue;
+}
+
+.auth{
+  margin: auto;
+  background: radial-gradient(circle, rgb(0 0 0 / 89%) 4%, rgb(148 187 233 / 0.1%) 57%);
+  /* background-color: #fffefe; */
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 40%;
+}
+
+.ttk{
+  font-size: 21px;
+  height: 70px;
+  display: flex;
+  color: white;
+  margin: 0px!important;
+  align-items: center;
+  justify-content: center;
+}
+
+.ttk:hover{
+  color: #7e21d5;
+  background:radial-gradient(circle, rgb(0 0 0 / 18%) 0%, rgb(44 46 47 / 9%) 13%) ;
+}
+
+.downsolve{
+  display: flex;
+  justify-content: center;
 }

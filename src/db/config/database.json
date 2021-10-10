@@ -1,29 +1,23 @@
 {
-	"development": {
-		"username": "elbrususer",
-		"password": "351269elbrus",
-		"database": "elbrussolveeverything",
-		"host": "127.0.0.1",
-		"dialect": "postgres",
-		"seederStorage": "sequelize",
-		"seederStorageTableName": "SequelizeData"
-	},
-	"test": {
-		"username": "elbrususer",
-		"password": "351269elbrus",
-		"database": "elbrussolveeverything",
-		"host": "127.0.0.1",
-		"dialect": "postgres",
-		"seederStorage": "sequelize",
-		"seederStorageTableName": "SequelizeData"
-	},
-	"production": {
-		"username": "elbrususer",
-		"password": "351269elbrus",
-		"database": "elbrussolveeverything",
-		"host": "127.0.0.1",
-		"dialect": "postgres",
-		"seederStorage": "sequelize",
-		"seederStorageTableName": "SequelizeData"
-	}
+  "development": {
+    "username": "nedosnow",
+    "password": "1234",
+    "database": "database_development",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "nedosnow",
+    "password": "1234",
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "nedosnow",
+    "password": "1234",
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
 }

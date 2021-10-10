@@ -4,7 +4,6 @@ const { Task } = require('../db/models');
 const { User } = require('../db/models');
 
 route.get('/', (req, res) => {
-
   res.render('index')
 })
 

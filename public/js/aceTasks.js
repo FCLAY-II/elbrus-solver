@@ -1,12 +1,12 @@
 const $formichka = document.querySelector("#but");
 
-const editor = ace.edit("editor");
+const editor = ace?.edit("editor");
 editor.setTheme("ace/theme/monokai");
 editor.session.setMode("ace/mode/javascript");
-editor.getSelectedText(); // or for a specific range
+editor.getSelectedText();
 editor.session.getTextRange(editor.getSelectionRange());
 
-$formichka.addEventListener("click", async (event) => {
+$formichka?.addEventListener("click", async (event) => {
   event.preventDefault();
   const getValue = editor.getValue();
   let taskId = event.target.closest('div').id
@@ -18,7 +18,6 @@ $formichka.addEventListener("click", async (event) => {
     },
     body: JSON.stringify({ getValue }),
   });
-console.log(response.status);
   if (response.ok) {
     window.location = `/tasks/${categoryId}/${Number(taskId) + 1}`
   } else if (response.status === 500) {

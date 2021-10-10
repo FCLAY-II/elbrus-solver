@@ -1,3 +1,4 @@
+        {{#if first_name}}
 <nav
   class='navbar navbar-expand-lg'
   id='nav'
@@ -7,7 +8,6 @@
 
     <div class='collapse navbar-collapse' id='navbarSupportedContent'>
 
-        {{#if first_name}}
       <div class='leftDiv'>
           <a class='form-control me-2 dropdown-item' href='/'>Домой</a>
       </div>
@@ -26,14 +26,13 @@
             href='/user/logout'
           >Выйти</a>
 
-        {{else}}
-          <a class='form-control me-2 dropdown-item' href='/'>Регистрация</a>
-          <a class='form-control me-2 dropdown-item' href='/'>Авторизация</a>
-        {{/if}}
+        {{!-- {{else}} --}}
+          {{!-- <a class='form-control me-2 dropdown-item' href='/'>Регистрация</a>
+          <a class='form-control me-2 dropdown-item' href='/'>Авторизация</a> --}}
 
       </div>
 
     </div>
   </div>
 </nav>
-<style></style>
+        {{/if}}

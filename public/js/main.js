@@ -1,4 +1,4 @@
-const navbar = document.querySelector('.container-fluid');
+const navbar = document.querySelector(".auth");
 const registration = document.querySelector('.center');
 const allBlock = document;
 const login = document.querySelector('.centerlog');
@@ -10,7 +10,7 @@ registration?.addEventListener('click', (event) => {
     navbar.style.display = 'none';
     registration.style.display = 'none';
     event.preventDefault();
-    allBlock.addEventListener('click', (event) => {
+    allBlock?.addEventListener('click', (event) => {
       if (event.target.parentElement.tagName === 'HTML') {
         login.style.display = 'none';
         navbar.style.display = 'block';
@@ -25,7 +25,7 @@ login?.addEventListener('click', (event) => {
     navbar.style.display = 'none';
     login.style.display = 'none';
     event.preventDefault();
-    allBlock.addEventListener('click', (event) => {
+    allBlock?.addEventListener('click', (event) => {
       if (event.target.parentElement.tagName === 'HTML') {
         registration.style.display = 'none';
         navbar.style.display = 'block';
@@ -35,11 +35,12 @@ login?.addEventListener('click', (event) => {
 });
 
 navbar?.addEventListener('click', (event) => {
+  console.log(event.target.innerText);
   if (event.target.innerText === 'Регистрация') {
     registration.style.display = 'block';
     navbar.style.display = 'none';
     event.preventDefault();
-    allBlock.addEventListener('click', (event) => {
+    allBlock?.addEventListener('click', (event) => {
       if (event.target.parentElement.tagName === 'HTML') {
         registration.style.display = 'none';
         navbar.style.display = 'block';
@@ -50,7 +51,7 @@ navbar?.addEventListener('click', (event) => {
     login.style.display = 'block';
     navbar.style.display = 'none';
     event.preventDefault();
-    allBlock.addEventListener('click', (event) => {
+    allBlock?.addEventListener('click', (event) => {
       if (event.target.parentElement.tagName === 'HTML') {
         login.style.display = 'none';
         navbar.style.display = 'block';
@@ -59,7 +60,7 @@ navbar?.addEventListener('click', (event) => {
   }
 });
 
-seven.addEventListener('click', async (event) => {
+seven?.addEventListener('click', async (event) => {
   if (event.target.closest('div')) {
     const articleId = event.target.closest('article').id;
     const response = await fetch(`/tasks/${articleId}`, {
@@ -70,7 +71,7 @@ seven.addEventListener('click', async (event) => {
       body: JSON.stringify({ id: articleId }),
     });
     if(response.ok) {
-      
+      console.log(7896);
     }
   }
 });
