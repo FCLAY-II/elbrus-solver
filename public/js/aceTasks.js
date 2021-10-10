@@ -6,7 +6,7 @@ editor.session.setMode("ace/mode/javascript");
 editor.getSelectedText();
 editor.session.getTextRange(editor.getSelectionRange());
 
-$formichka?.addEventListener("click", async (event) => {
+$formichka.addEventListener("click", async (event) => {
   event.preventDefault();
   const getValue = editor.getValue();
   let taskId = event.target.closest('div').id
