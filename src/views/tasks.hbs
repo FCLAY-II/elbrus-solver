@@ -1,8 +1,8 @@
 
-  <div>
+  <div class="tassk">
 <span id= {{taska.category_id}} class="formicka">
 
-  <div class="task-title">
+  <div class="task-title score">
     {{taska.task}}
   </div>
 
@@ -10,9 +10,10 @@
   <div id='editor'>function funcTest() {}
   </div>
 
-      <div id={{taska.id}}>
- <button id='but' type="button" class="btn btn-primary btn-lg" href="/tasks/{{taska.category_id}}/{{taska.id}}">Check</button>
-      </div>
+      <article class="buton" id={{taska.id}}>
+ <button data-btn="out" id='butL' type="button" class="btn btn-primary btn-lg" href="/solve">Выход</button>
+ <button data-btn="next"  id='but' type="button" class="btn btn-primary btn-lg" href="/tasks/{{taska.category_id}}/{{taska.id}}">Отправить</button>
+      </article>
 
     </span>
 
