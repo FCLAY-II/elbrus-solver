@@ -67,5 +67,3 @@ npm i
 ```javascript
 npm start
 ```
-<br/>
-
