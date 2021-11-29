@@ -46,3 +46,24 @@
    <h3><a href="https://github.com/Bootakov">Fullstack, Михаил Бутаков</a></h3>
   </div>
 </a>
+
+### Запуск проекта: 
+
+<br/>
+Набрать команду в терминале:
+<br/>
+
+
+```javascript
+npm i
+```
+<br/>
+Далее:
+<br/>
+
+
+```javascript
+npm start
+```
+<br/>
+
