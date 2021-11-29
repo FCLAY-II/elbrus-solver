@@ -24,8 +24,25 @@
 [![ExpressJS](https://img.shields.io/badge/-Express.js-333?logo=express&style=for-the-badge)](https://expressjs.com/ru/)
 [![Sequelize](https://img.shields.io/badge/-Sequelize-f9fbfa?logo=Sequelize&style=for-the-badge)](https://sequelize.org/master/)
 
-### Создатели:
+### Команда проекта 🥷:
 
-<p><a href='https://github.com/aleksander-vypov'>Fullstack, Александр Выпов </a></p>
-<p><a href='https://github.com/FCLAY-II'>Fullstack, Кирилл Белокопытов </a></p>
-<p><a href='https://github.com/Bootakov'>Fullstack, Михаил Бутаков </a></p>
+<a href="https://github.com/FCLAY-II">
+  <div>
+   <img align="left" alt="Кирилл Белокопытов" width="22px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/github.svg" />
+   <h3><a href="https://github.com/FCLAY-II"> Fullstack, Кирилл Белокопытов</a></h3>
+  </div>
+</a>
+
+<a href="https://github.com/aleksander-vypov">
+  <div>
+   <img align="left" alt="Александр Выпов" width="22px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/github.svg" />
+   <h3><a href="https://github.com/aleksander-vypov"> Fullstack, Александр Выпов </a></h3>
+  </div>
+</a>
+
+<a href="https://github.com/Bootakov">
+  <div>
+   <img align="left" alt="Михаил Бутаков" width="22px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/github.svg" />
+   <h3><a href="https://github.com/Bootakov">Fullstack, Михаил Бутаков</a></h3>
+  </div>
+</a>
